@@ -33,9 +33,8 @@ If we want to profile the CUDA kernels using [NVIDIA Nsight Compute](https://lei
 To build the CUDA kernels, please run the following commands inside the Docker container.
 
 ```bash
-$ cmake -B build
-$ cmake --build build --config Release --parallel
-$ cmake --install build
+$ mkdir build
+$ make
 ```
 
 ### Run CUDA Kernels
@@ -43,8 +42,8 @@ $ cmake --install build
 To run the FP32 and FP16 GEMM CUDA kernels, please run the following commands inside the Docker container.
 
 ```bash
-$ ./build/src/profile_cuda_gemm_fp32
-$ ./build/src/profile_cuda_gemm_fp16
+$ ./build/profile_cuda_gemm_fp32
+$ ./build/profile_cuda_gemm_fp16
 ```
 
 ## Performances
